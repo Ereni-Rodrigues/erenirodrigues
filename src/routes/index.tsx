@@ -1,26 +1,37 @@
 import { createFileRoute } from "@tanstack/react-router";
+import { Navbar } from "@/components/Navbar";
+import { Hero } from "@/components/Hero";
+import { Sobre } from "@/components/Sobre";
+import { PorqueTerapia } from "@/components/PorqueTerapia";
+import { TRG } from "@/components/TRG";
+import { Metodos } from "@/components/Metodos";
+import { Diferenciais } from "@/components/Diferenciais";
+import { Depoimentos } from "@/components/Depoimentos";
+import { CTAFinal } from "@/components/CTAFinal";
+import { Footer } from "@/components/Footer";
+import { WhatsAppFloat } from "@/components/WhatsAppFloat";
+import { FadeIn } from "@/components/FadeIn";
 
 export const Route = createFileRoute("/")({
   component: Index,
 });
 
-// IMPORTANT: Replace this placeholder. For sites with multiple pages (About, Services, Contact, etc.),
-// create separate route files (about.tsx, services.tsx, contact.tsx) — don't put all pages in this file.
-function PlaceholderIndex() {
+function Index() {
   return (
-    <div
-      className="flex min-h-screen items-center justify-center"
-      style={{ backgroundColor: "#fcfbf8" }}
-    >
-      <img
-        data-lovable-blank-page-placeholder="REMOVE_THIS"
-        src="https://cdn.gpteng.co/blank-app-v1.svg"
-        alt="Your app will live here!"
-      />
+    <div className="min-h-screen bg-bg-primary">
+      <Navbar />
+      <main>
+        <Hero />
+        <FadeIn as="div"><Sobre /></FadeIn>
+        <FadeIn as="div"><PorqueTerapia /></FadeIn>
+        <FadeIn as="div"><TRG /></FadeIn>
+        <FadeIn as="div"><Metodos /></FadeIn>
+        <FadeIn as="div"><Diferenciais /></FadeIn>
+        <FadeIn as="div"><Depoimentos /></FadeIn>
+        <FadeIn as="div"><CTAFinal /></FadeIn>
+      </main>
+      <Footer />
+      <WhatsAppFloat />
     </div>
   );
-}
-
-function Index() {
-  return <PlaceholderIndex />;
 }
