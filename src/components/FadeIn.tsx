@@ -29,14 +29,25 @@ export function FadeIn({ children, className = "", as = "div", id }: FadeInProps
     return () => observer.disconnect();
   }, []);
 
-  const Tag = as as "div";
+  const cls = `${className} ${visible ? "animate-fade-in-up" : "opacity-0"}`;
+  if (as === "section") {
+    return (
+      <section
+        ref={ref as React.RefObject<HTMLElement>}
+        id={id}
+        className={cls}
+      >
+        {children}
+      </section>
+    );
+  }
   return (
-    <Tag
+    <div
       ref={ref as React.RefObject<HTMLDivElement>}
       id={id}
-      className={`${className} ${visible ? "animate-fade-in-up" : "opacity-0"}`}
+      className={cls}
     >
       {children}
-    </Tag>
+    </div>
   );
 }
