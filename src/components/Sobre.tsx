@@ -1,4 +1,4 @@
-import { Camera } from "lucide-react";
+import ereniSobre from "@/assets/ereni-sobre.jpg";
 
 export function Sobre() {
   return (
@@ -6,19 +6,13 @@ export function Sobre() {
       <div className="mx-auto max-w-6xl px-4 md:px-8">
         <div className="grid grid-cols-1 md:grid-cols-5 gap-10 md:gap-14 items-center">
           <div className="md:col-span-2 flex justify-center">
-            <div
-              className="flex flex-col items-center justify-center bg-white/60 text-text-muted"
-              style={{
-                borderRadius: "16px",
-                aspectRatio: "3 / 4",
-                width: "min(340px, 80vw)",
-              }}
-              data-photo-placeholder="ereni-sobre"
-            >
-              <Camera size={40} className="mb-2 opacity-60" />
-              <span className="text-sm" style={{ fontWeight: 300 }}>
-                Foto da Ereni
-              </span>
+            <div className="relative w-full">
+              <img
+                src={ereniSobre}
+                alt="Ereni Rodrigues"
+                className="w-full h-auto object-cover rounded-2xl"
+                style={{ maxHeight: "520px", objectPosition: "center top" }}
+              />
             </div>
           </div>
 

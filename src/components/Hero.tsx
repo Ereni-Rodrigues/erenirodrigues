@@ -1,4 +1,5 @@
-import { MessageCircle, Camera } from "lucide-react";
+import { MessageCircle } from "lucide-react";
+import ereniHero from "@/assets/ereni-hero.jpg";
 
 const WA_LINK = "https://wa.me/5511966308468";
 
@@ -15,20 +16,16 @@ export function Hero() {
                 className="absolute -inset-6 rounded-full border-2 border-dashed pointer-events-none"
                 style={{ borderColor: "rgba(196, 154, 44, 0.3)" }}
               />
-              <div
-                className="relative flex flex-col items-center justify-center bg-bg-secondary text-text-muted"
+              <img
+                src={ereniHero}
+                alt="Ereni Rodrigues - Terapeuta"
+                className="relative rounded-2xl object-cover"
                 style={{
-                  borderRadius: "16px",
                   aspectRatio: "3 / 4",
                   width: "min(320px, 80vw)",
+                  objectPosition: "top",
                 }}
-                data-photo-placeholder="ereni"
-              >
-                <Camera size={40} className="mb-2 opacity-60" />
-                <span className="text-sm" style={{ fontWeight: 300 }}>
-                  Foto da Ereni
-                </span>
-              </div>
+              />
             </div>
           </div>
 

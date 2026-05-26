@@ -1,4 +1,5 @@
 import { Instagram } from "lucide-react";
+import logoEreni from "@/assets/logo-ereni.png";
 
 const WA_LINK = "https://wa.me/5511966308468";
 
@@ -8,12 +9,12 @@ export function Footer() {
       <div className="mx-auto max-w-6xl px-4 md:px-8 py-14">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
           <div>
-            <p
-              className="font-display text-white mb-4"
-              style={{ fontSize: "1.4rem", fontWeight: 700 }}
-            >
-              Ereni Rodrigues
-            </p>
+            <img
+              src={logoEreni}
+              alt="Ereni Rodrigues - Terapeuta"
+              className="h-10 w-auto object-contain mb-4"
+              style={{ filter: "brightness(0) invert(1)", opacity: 0.9 }}
+            />
             <p
               style={{
                 color: "rgba(255,255,255,0.6)",
