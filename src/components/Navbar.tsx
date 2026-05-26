@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import logoEreni from "@/assets/logo-ereni.png";
 
 const WA_LINK = "https://wa.me/5511966308468";
 
@@ -29,12 +30,11 @@ export function Navbar() {
     >
       <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-3 md:px-8">
         <a href="#inicio" className="flex items-center gap-2" aria-label="Ereni Rodrigues">
-          <span
-            className="font-display text-[1.05rem] md:text-[1.25rem] font-bold text-brown-dark leading-none"
-            style={{ letterSpacing: "0.01em" }}
-          >
-            Ereni Rodrigues
-          </span>
+          <img
+            src={logoEreni}
+            alt="Ereni Rodrigues - Terapeuta"
+            className="h-12 md:h-14 w-auto object-contain"
+          />
         </a>
 
         <nav className="hidden md:flex items-center gap-7">
