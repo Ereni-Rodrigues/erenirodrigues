@@ -1,4 +1,4 @@
-import { Instagram } from "lucide-react";
+import { Instagram, MessageCircle, Mail } from "lucide-react";
 import logoEreni from "@/assets/logo-ereni.png";
 
 const WA_LINK = "https://wa.me/5511966308468";
@@ -33,44 +33,36 @@ export function Footer() {
             >
               Contato
             </p>
-            <ul className="space-y-2.5" style={{ fontSize: "0.95rem" }}>
-              <li>
-                <a
-                  href={WA_LINK}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="hover:text-gold-light transition-colors"
-                  style={{ color: "rgba(255,255,255,0.85)" }}
-                >
-                  WhatsApp: (11) 96630-8468
-                </a>
-              </li>
-              <li>
-                <a
-                  href="mailto:erenirodrigues6@gmail.com"
-                  className="hover:text-gold-light transition-colors break-all"
-                  style={{ color: "rgba(255,255,255,0.85)" }}
-                >
-                  erenirodrigues6@gmail.com
-                </a>
-              </li>
-              <li>
-                <a
-                  href="https://instagram.com/erenirodrigueisterapeuta"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="hover:text-gold-light transition-colors"
-                  style={{ color: "rgba(255,255,255,0.85)" }}
-                >
-                  @erenirodrigueisterapeuta
-                </a>
-              </li>
-              {/* TODO: Facebook — aguardando link
-              <li>
-                <a href="#" target="_blank" rel="noopener noreferrer">Facebook</a>
-              </li>
-              */}
-            </ul>
+            <div className="flex flex-col gap-3">
+              <a
+                href={WA_LINK}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-3 transition-opacity hover:opacity-80"
+                style={{ color: "rgba(255,255,255,0.75)", fontSize: "0.95rem" }}
+              >
+                <MessageCircle size={18} style={{ color: "var(--gold)", flexShrink: 0 }} />
+                <span>(11) 96630-8468</span>
+              </a>
+              <a
+                href="mailto:erenirodrigues6@gmail.com"
+                className="flex items-center gap-3 transition-opacity hover:opacity-80 break-all"
+                style={{ color: "rgba(255,255,255,0.75)", fontSize: "0.95rem" }}
+              >
+                <Mail size={18} style={{ color: "var(--gold)", flexShrink: 0 }} />
+                <span>erenirodrigues6@gmail.com</span>
+              </a>
+              <a
+                href="https://www.instagram.com/erenirodriguesterapeuta/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-3 transition-opacity hover:opacity-80"
+                style={{ color: "rgba(255,255,255,0.75)", fontSize: "0.95rem" }}
+              >
+                <Instagram size={18} style={{ color: "var(--gold)", flexShrink: 0 }} />
+                <span>@erenirodriguesterapeuta</span>
+              </a>
+            </div>
           </div>
 
           <div>

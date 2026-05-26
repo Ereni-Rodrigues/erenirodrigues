@@ -5,7 +5,7 @@ const WA_LINK = "https://wa.me/5511966308468";
 
 export function Hero() {
   return (
-    <section id="inicio" className="min-h-screen bg-bg-primary pt-28 pb-16 md:pt-32">
+    <section id="inicio" className="min-h-[85vh] bg-bg-primary pt-28 pb-16 md:pt-32">
       <div className="mx-auto max-w-7xl px-4 md:px-8">
         <div className="grid grid-cols-1 md:grid-cols-5 gap-10 md:gap-12 items-center">
           {/* Photo first on mobile, right on desktop */}
@@ -29,23 +29,52 @@ export function Hero() {
             </div>
           </div>
 
-          <div className="md:col-span-3 md:order-1">
+          <div
+            className="md:col-span-3 md:order-1 rounded-2xl"
+            style={{
+              background:
+                "linear-gradient(135deg, rgba(60,32,14,0.92) 0%, rgba(92,51,23,0.88) 100%)",
+              padding: "clamp(28px, 4vw, 48px)",
+              boxShadow: "0 20px 60px rgba(60,32,14,0.25)",
+            }}
+          >
             <p
-              className="text-text-muted text-[0.78rem] mb-5 uppercase"
-              style={{ fontWeight: 300, letterSpacing: "0.15em" }}
+              className="text-[0.78rem] mb-3 uppercase"
+              style={{
+                color: "var(--gold)",
+                opacity: 0.85,
+                fontWeight: 600,
+                letterSpacing: "0.18em",
+              }}
             >
               Atendimento online · Todo o Brasil
             </p>
+            <div
+              aria-hidden
+              className="mb-6"
+              style={{
+                width: "56px",
+                height: "2px",
+                backgroundColor: "var(--gold)",
+                opacity: 0.9,
+              }}
+            />
             <h1
               className="font-display leading-[1.1] mb-6"
               style={{ fontSize: "clamp(2.2rem, 5vw, 3.8rem)", fontWeight: 700 }}
             >
-              <span className="block text-brown-dark">Se livre das dores que</span>
+              <span className="block" style={{ color: "rgba(255,255,255,0.9)" }}>
+                Se livre das dores que
+              </span>
               <span className="block text-gold">você não causou.</span>
             </h1>
             <p
-              className="text-text-body mb-8 max-w-xl"
-              style={{ fontSize: "1.15rem", lineHeight: 1.6 }}
+              className="mb-8 max-w-xl"
+              style={{
+                color: "rgba(255,255,255,0.72)",
+                fontSize: "1.15rem",
+                lineHeight: 1.6,
+              }}
             >
               Terapia online para quem quer resultados reais, em qualquer lugar do
               Brasil.
