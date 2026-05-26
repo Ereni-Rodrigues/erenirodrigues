@@ -1,11 +1,17 @@
 import ereniSobre from "@/assets/ereni-sobre.jpg";
+import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 
 export function Sobre() {
+  const img = useScrollAnimation<HTMLDivElement>();
+  const txt = useScrollAnimation<HTMLDivElement>();
   return (
     <section id="sobre" className="bg-bg-secondary py-20 md:py-28">
       <div className="mx-auto max-w-6xl px-4 md:px-8">
         <div className="grid grid-cols-1 md:grid-cols-5 gap-10 md:gap-14 items-center">
-          <div className="md:col-span-2 flex justify-center">
+          <div
+            ref={img.ref}
+            className={`md:col-span-2 flex justify-center animate-fade-in ${img.isVisible ? "visible" : ""}`}
+          >
             <div className="relative w-full">
               <img
                 src={ereniSobre}
@@ -16,7 +22,10 @@ export function Sobre() {
             </div>
           </div>
 
-          <div className="md:col-span-3">
+          <div
+            ref={txt.ref}
+            className={`md:col-span-3 animate-fade-up ${txt.isVisible ? "visible" : ""}`}
+          >
             <p
               className="text-gold mb-4 uppercase"
               style={{ fontWeight: 700, fontSize: "0.8rem", letterSpacing: "0.2em" }}
