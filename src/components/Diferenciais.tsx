@@ -1,4 +1,5 @@
 import { Target, Zap, Globe, type LucideIcon } from "lucide-react";
+import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 
 const ITEMS: { icon: LucideIcon; title: string; text: string }[] = [
   {
@@ -19,6 +20,8 @@ const ITEMS: { icon: LucideIcon; title: string; text: string }[] = [
 ];
 
 export function Diferenciais() {
+  const head = useScrollAnimation<HTMLDivElement>();
+  const grid = useScrollAnimation<HTMLDivElement>();
   return (
     <section
       id="diferenciais"
@@ -26,7 +29,10 @@ export function Diferenciais() {
       style={{ backgroundColor: "var(--brown-dark)" }}
     >
       <div className="mx-auto max-w-6xl px-4 md:px-8">
-        <div className="text-center mb-12">
+        <div
+          ref={head.ref}
+          className={`text-center mb-12 animate-fade-up ${head.isVisible ? "visible" : ""}`}
+        >
           <p
             className="mb-4 uppercase"
             style={{
@@ -46,12 +52,13 @@ export function Diferenciais() {
           </h2>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-          {ITEMS.map((it) => {
+        <div ref={grid.ref} className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          {ITEMS.map((it, i) => {
             const Icon = it.icon;
             return (
               <div
                 key={it.title}
+                className={`animate-fade-up delay-${i + 1} ${grid.isVisible ? "visible" : ""}`}
                 style={{
                   background: "rgba(255,255,255,0.07)",
                   border: "1px solid rgba(196,154,44,0.3)",

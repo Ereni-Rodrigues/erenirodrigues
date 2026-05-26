@@ -1,6 +1,9 @@
+import { useScrollAnimation } from "@/hooks/useScrollAnimation";
+
 const WA_LINK = "https://wa.me/5511966308468";
 
 export function CTAFinal() {
+  const a = useScrollAnimation<HTMLDivElement>();
   return (
     <section
       id="contato"
@@ -10,7 +13,10 @@ export function CTAFinal() {
           "linear-gradient(180deg, var(--bg-primary) 0%, var(--bg-secondary) 100%)",
       }}
     >
-      <div className="mx-auto max-w-3xl px-4 md:px-8 text-center">
+      <div
+        ref={a.ref}
+        className={`mx-auto max-w-3xl px-4 md:px-8 text-center animate-fade-up ${a.isVisible ? "visible" : ""}`}
+      >
         <h2
           className="font-display text-brown-dark mb-5"
           style={{ fontSize: "clamp(2rem, 4vw, 3rem)", fontWeight: 700 }}

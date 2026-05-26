@@ -1,7 +1,13 @@
+import { useScrollAnimation } from "@/hooks/useScrollAnimation";
+
 export function TRG() {
+  const a = useScrollAnimation<HTMLDivElement>();
   return (
     <section id="trg" className="bg-bg-secondary py-20 md:py-28">
-      <div className="mx-auto max-w-[800px] px-4 md:px-8 text-center">
+      <div
+        ref={a.ref}
+        className={`mx-auto max-w-[800px] px-4 md:px-8 text-center animate-fade-up ${a.isVisible ? "visible" : ""}`}
+      >
         <p
           className="text-gold mb-4 uppercase"
           style={{ fontWeight: 700, fontSize: "0.8rem", letterSpacing: "0.2em" }}

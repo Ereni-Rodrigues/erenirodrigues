@@ -26,11 +26,18 @@ const METODOS = [
   },
 ];
 
+import { useScrollAnimation } from "@/hooks/useScrollAnimation";
+
 export function Metodos() {
+  const head = useScrollAnimation<HTMLDivElement>();
+  const list = useScrollAnimation<HTMLDivElement>();
   return (
     <section id="metodos" className="bg-bg-primary py-20 md:py-28">
       <div className="mx-auto max-w-[700px] px-4 md:px-8">
-        <div className="text-center mb-12">
+        <div
+          ref={head.ref}
+          className={`text-center mb-12 animate-fade-up ${head.isVisible ? "visible" : ""}`}
+        >
           <p
             className="text-gold mb-4 uppercase"
             style={{ fontWeight: 700, fontSize: "0.8rem", letterSpacing: "0.2em" }}
@@ -45,10 +52,13 @@ export function Metodos() {
           </h2>
         </div>
 
-        <div className="space-y-4">
-          {METODOS.map((m) => (
+        <div ref={list.ref} className="space-y-4">
+          {METODOS.map((m, i) => (
             <div
               key={m.n}
+              className={`animate-fade-up delay-${i + 1} ${list.isVisible ? "visible" : ""}`}
+            >
+            <div
               className="bg-white flex items-center gap-4 p-5 shadow-[0_4px_18px_rgba(92,51,23,0.06)]"
               style={{ borderRadius: "8px" }}
             >
@@ -69,6 +79,7 @@ export function Metodos() {
                   {m.text}
                 </p>
               </div>
+            </div>
             </div>
           ))}
         </div>
