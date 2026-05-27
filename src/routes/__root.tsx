@@ -7,6 +7,7 @@ import {
   HeadContent,
   Scripts,
 } from "@tanstack/react-router";
+import { useEffect } from "react";
 
 import appCss from "../styles.css?url";
 
@@ -123,6 +124,16 @@ function RootShell({ children }: { children: React.ReactNode }) {
 
 function RootComponent() {
   const { queryClient } = Route.useRouteContext();
+
+  useEffect(() => {
+    if (typeof window === "undefined") return;
+    try {
+      window.history.scrollRestoration = "manual";
+    } catch {
+      /* noop */
+    }
+    window.scrollTo({ top: 0, behavior: "instant" as ScrollBehavior });
+  }, []);
 
   return (
     <QueryClientProvider client={queryClient}>
