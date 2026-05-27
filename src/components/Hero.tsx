@@ -22,15 +22,7 @@ export function Hero() {
               <img
                 src={ereniHero}
                 alt="Ereni Rodrigues, Terapeuta"
-                className="w-full h-full object-cover object-top rounded-2xl"
-              />
-              <div
-                className="absolute inset-0 rounded-2xl"
-                style={{
-                  background:
-                    "linear-gradient(to right, #1C0A02 0%, transparent 18%, transparent 82%, #1C0A02 100%)",
-                  pointerEvents: "none",
-                }}
+                className="w-full h-full object-contain rounded-2xl"
               />
             </div>
           </div>
