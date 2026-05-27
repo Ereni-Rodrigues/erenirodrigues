@@ -1,4 +1,3 @@
-import { MessageCircle } from "lucide-react";
 import ereniHero from "@/assets/ereni-hero.jpg";
 
 const WA_LINK = "https://wa.me/5511966308468";
