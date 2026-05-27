@@ -5,39 +5,40 @@ const WA_LINK = "https://wa.me/5511966308468";
 
 export function Hero() {
   return (
-    <section id="inicio" className="min-h-[85vh] bg-bg-primary pt-28 pb-16 md:pt-32">
-      <div className="mx-auto max-w-7xl px-4 md:px-8">
+    <section
+      id="inicio"
+      className="relative w-full min-h-[85vh] flex flex-col justify-center pt-28 pb-12 md:pt-32"
+      style={{
+        background:
+          "linear-gradient(135deg, #1C0A02 0%, #2E1008 60%, #3D1A08 100%)",
+      }}
+    >
+      <div className="mx-auto max-w-7xl w-full px-4 md:px-8">
         <div className="grid grid-cols-1 md:grid-cols-5 gap-10 md:gap-12 items-center">
-          {/* Photo first on mobile, right on desktop */}
+          {/* Photo */}
           <div className="md:col-span-2 md:order-2 flex justify-center">
-            <div className="relative">
-              <div
-                aria-hidden
-                className="absolute -inset-6 rounded-full border-2 border-dashed pointer-events-none"
-                style={{ borderColor: "rgba(196, 154, 44, 0.3)" }}
-              />
+            <div
+              className="relative w-full"
+              style={{ maxWidth: "340px", aspectRatio: "3 / 4" }}
+            >
               <img
                 src={ereniHero}
-                alt="Ereni Rodrigues - Terapeuta"
-                className="relative rounded-2xl object-cover"
+                alt="Ereni Rodrigues, Terapeuta"
+                className="w-full h-full object-cover object-top rounded-2xl"
+              />
+              <div
+                className="absolute inset-0 rounded-2xl"
                 style={{
-                  aspectRatio: "3 / 4",
-                  width: "min(320px, 80vw)",
-                  objectPosition: "top",
+                  background:
+                    "linear-gradient(to right, #1C0A02 0%, transparent 18%, transparent 82%, #1C0A02 100%)",
+                  pointerEvents: "none",
                 }}
               />
             </div>
           </div>
 
-          <div
-            className="md:col-span-3 md:order-1 rounded-2xl"
-            style={{
-              background:
-                "linear-gradient(135deg, rgba(60,32,14,0.92) 0%, rgba(92,51,23,0.88) 100%)",
-              padding: "clamp(28px, 4vw, 48px)",
-              boxShadow: "0 20px 60px rgba(60,32,14,0.25)",
-            }}
-          >
+          {/* Text */}
+          <div className="md:col-span-3 md:order-1 flex flex-col justify-center px-2 md:px-4 py-2">
             <p
               className="text-[0.78rem] mb-3 uppercase"
               style={{
@@ -83,18 +84,44 @@ export function Hero() {
               href={WA_LINK}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 rounded-[4px] bg-gold px-7 py-3.5 text-white uppercase transition-colors hover:bg-[#b08824]"
-              style={{
-                fontFamily: "Lato, sans-serif",
-                fontWeight: 700,
-                letterSpacing: "0.05em",
-                fontSize: "0.95rem",
-              }}
+              className="btn-primary btn-primary-dark self-start"
             >
-              <MessageCircle size={20} />
-              Agende agora
+              <MessageCircle size={18} />
+              <span>Agende agora</span>
             </a>
           </div>
+        </div>
+
+        {/* Frase central — abaixo das colunas */}
+        <div
+          className="w-full flex flex-col items-center gap-4 pt-10 pb-2 px-4"
+          style={{
+            borderTop: "1px solid rgba(196,154,44,0.2)",
+            marginTop: "2.5rem",
+          }}
+        >
+          <svg width="24" height="16" viewBox="0 0 24 16" fill="none" aria-hidden>
+            <path
+              d="M0 16C0 10.667 2.667 5.333 8 0L10.667 2C7.111 6.222 5.333 10.222 5.333 14H10.667V16H0ZM13.333 16C13.333 10.667 16 5.333 21.333 0L24 2C20.444 6.222 18.667 10.222 18.667 14H24V16H13.333Z"
+              fill="rgba(196,154,44,0.4)"
+            />
+          </svg>
+          <p
+            style={{
+              fontFamily: "'Playfair Display', serif",
+              fontStyle: "italic",
+              fontWeight: 400,
+              fontSize: "clamp(1rem, 2.2vw, 1.3rem)",
+              color: "rgba(255,255,255,0.82)",
+              textAlign: "center",
+              maxWidth: "780px",
+              lineHeight: 1.75,
+              letterSpacing: "0.01em",
+            }}
+          >
+            Você pode conseguir qualquer coisa que queira na vida, se você ajudar
+            outras pessoas a conseguirem o que elas querem.
+          </p>
         </div>
       </div>
     </section>

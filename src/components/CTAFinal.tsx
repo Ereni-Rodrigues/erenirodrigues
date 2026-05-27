@@ -33,16 +33,9 @@ export function CTAFinal() {
           href={WA_LINK}
           target="_blank"
           rel="noopener noreferrer"
-          className="inline-flex items-center rounded-[4px] bg-gold text-white uppercase transition-colors hover:bg-[#b08824]"
-          style={{
-            fontFamily: "Lato, sans-serif",
-            fontWeight: 700,
-            letterSpacing: "0.05em",
-            fontSize: "1.1rem",
-            padding: "16px 48px",
-          }}
+          className="btn-primary"
         >
-          Agende agora
+          <span>Agende agora</span>
         </a>
       </div>
     </section>
