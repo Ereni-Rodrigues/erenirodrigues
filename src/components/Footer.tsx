@@ -5,28 +5,31 @@ const WA_LINK = "https://wa.me/5511966308468";
 
 export function Footer() {
   return (
-    <footer style={{ backgroundColor: "var(--brown-dark)" }} className="text-white">
-      <div className="mx-auto max-w-6xl px-4 md:px-8 py-14">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
-          <div>
-            <img
-              src={logoEreni}
-              alt="Ereni Rodrigues - Terapeuta"
-              className="h-10 w-auto object-contain mb-4"
-              style={{ filter: "brightness(0) invert(1)", opacity: 0.9 }}
-            />
-            <p
-              style={{
-                color: "rgba(255,255,255,0.6)",
-                fontSize: "0.95rem",
-                lineHeight: 1.6,
-              }}
-            >
-              Terapia de Reprocessamento Generativo online para todo o Brasil.
-            </p>
-          </div>
+    <footer style={{ background: "var(--brown-dark)" }} className="w-full text-white">
+      <div className="max-w-6xl mx-auto px-6 py-14 grid grid-cols-1 md:grid-cols-2 gap-12">
+        <div className="flex flex-col gap-5">
+          <img
+            src={logoEreni}
+            alt="Ereni Rodrigues - Terapeuta"
+            className="h-10 w-auto object-contain self-start"
+            style={{ filter: "brightness(0) invert(1)", opacity: 0.85 }}
+          />
+          <p
+            style={{
+              color: "rgba(255,255,255,0.5)",
+              fontFamily: "Lato, sans-serif",
+              fontWeight: 300,
+              fontSize: "0.9rem",
+              lineHeight: 1.7,
+              maxWidth: "320px",
+            }}
+          >
+            Terapia de Reprocessamento Generativo online para todo o Brasil.
+            Resultados reais, desde a raiz.
+          </p>
+        </div>
 
-          <div>
+        <div>
             <p
               className="text-gold-light uppercase mb-4"
               style={{ fontWeight: 700, fontSize: "0.8rem", letterSpacing: "0.2em" }}
@@ -63,51 +66,31 @@ export function Footer() {
                 <span>@erenirodriguesterapeuta</span>
               </a>
             </div>
-          </div>
-
-          <div>
-            <p
-              className="text-gold-light uppercase mb-4"
-              style={{ fontWeight: 700, fontSize: "0.8rem", letterSpacing: "0.2em" }}
-            >
-              Instagram
-            </p>
-            {/* TODO: substituir pelo embed do feed via Behold ou EmbedSocial */}
-            <div className="grid grid-cols-3 gap-2">
-              {Array.from({ length: 6 }).map((_, i) => (
-                <div
-                  key={i}
-                  className="aspect-square flex items-center justify-center"
-                  style={{
-                    background: "rgba(255,255,255,0.06)",
-                    border: "1px solid rgba(255,255,255,0.08)",
-                    borderRadius: "6px",
-                  }}
-                >
-                  <Instagram
-                    size={20}
-                    style={{ color: "rgba(255,255,255,0.35)" }}
-                  />
-                </div>
-              ))}
-            </div>
-          </div>
         </div>
+      </div>
 
-        <div
-          className="mt-12 pt-6 text-center"
-          style={{ borderTop: "1px solid rgba(255,255,255,0.08)" }}
+      <div
+        style={{ borderTop: "1px solid rgba(255,255,255,0.07)" }}
+        className="py-5 px-6 text-center"
+      >
+        <p
+          style={{
+            color: "rgba(255,255,255,0.3)",
+            fontFamily: "Lato, sans-serif",
+            fontWeight: 300,
+            fontSize: "0.8rem",
+          }}
         >
-          <p
-            style={{
-              color: "rgba(255,255,255,0.4)",
-              fontWeight: 300,
-              fontSize: "0.85rem",
-            }}
+          © 2026 Ereni Rodrigues · Desenvolvido por{" "}
+          <a
+            href="https://nextassessoria.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            style={{ color: "rgba(196,154,44,0.6)" }}
           >
-            © 2026 Ereni Rodrigues · Desenvolvido por Next Assessoria
-          </p>
-        </div>
+            Next Assessoria
+          </a>
+        </p>
       </div>
     </footer>
   );
