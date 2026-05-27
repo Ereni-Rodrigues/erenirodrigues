@@ -1,4 +1,3 @@
-import { MessageCircle } from "lucide-react";
 import ereniHero from "@/assets/ereni-hero.jpg";
 
 const WA_LINK = "https://wa.me/5511966308468";
@@ -80,15 +79,23 @@ export function Hero() {
               Terapia online para quem quer resultados reais, em qualquer lugar do
               Brasil.
             </p>
-            <a
-              href={WA_LINK}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="btn-primary btn-primary-dark self-start"
-            >
-              <MessageCircle size={18} />
-              <span>Agende agora</span>
-            </a>
+            <div className="flex flex-wrap items-center gap-3 self-start">
+              <a
+                href="#terapia"
+                className="btn-hero-gold"
+              >
+                <span>+ Por que fazer terapia?</span>
+              </a>
+              <a
+                href={WA_LINK}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn-hero-outline"
+              >
+                <span>Agende agora</span>
+                <span aria-hidden>→</span>
+              </a>
+            </div>
           </div>
         </div>
 

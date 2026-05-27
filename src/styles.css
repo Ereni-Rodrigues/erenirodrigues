@@ -196,3 +196,55 @@ html {
   color: #1C0A02;
   border-color: var(--gold);
 }
+
+/* ── Botões Hero (CTA duplo) ── */
+.btn-hero-gold,
+.btn-hero-outline {
+  all: unset;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 12px 28px;
+  border-radius: 4px;
+  font-family: 'Lato', system-ui, sans-serif;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  cursor: pointer;
+  white-space: nowrap;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  box-sizing: border-box;
+}
+
+/* Botão esquerdo — preenchido dourado */
+.btn-hero-gold {
+  background: var(--gold);
+  color: #1C0A02;
+  border: 1px solid var(--gold);
+}
+
+.btn-hero-gold:hover {
+  background: var(--gold-light);
+  border-color: var(--gold-light);
+  color: #1C0A02;
+  transform: translateY(-1px);
+  box-shadow: 0 6px 20px rgba(196, 154, 44, 0.3);
+}
+
+/* Botão direito — contorno claro */
+.btn-hero-outline {
+  background: transparent;
+  color: rgba(255, 255, 255, 0.92);
+  border: 1px solid rgba(255, 255, 255, 0.45);
+}
+
+.btn-hero-outline:hover {
+  background: rgba(255, 255, 255, 0.08);
+  border-color: rgba(255, 255, 255, 0.75);
+  color: #FFFFFF;
+  transform: translateY(-1px);
+}
