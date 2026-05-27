@@ -8,8 +8,7 @@ export function Hero() {
       id="inicio"
       className="relative w-full min-h-[85vh] flex flex-col justify-center pt-28 pb-12 md:pt-32"
       style={{
-        background:
-          "linear-gradient(135deg, #1C0A02 0%, #2E1008 60%, #3D1A08 100%)",
+        background: "linear-gradient(135deg, #5C3317 0%, #6B3E1F 50%, #5C3317 100%)",
       }}
     >
       <div className="mx-auto max-w-7xl w-full px-4 md:px-8">
