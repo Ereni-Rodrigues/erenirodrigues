@@ -10,7 +10,8 @@ export function Sobre() {
         <div className="grid grid-cols-1 md:grid-cols-5 gap-10 md:gap-14 items-center">
           <div
             ref={img.ref}
-            className={`md:col-span-2 flex justify-center animate-fade-in ${img.isVisible ? "visible" : ""}`}
+            className={`order-2 md:order-1 md:col-span-2 flex justify-center animate-fade-in ${img.isVisible ? "visible" : ""}`}
+          >
           >
             <div className="relative w-full">
               <img
@@ -24,7 +25,7 @@ export function Sobre() {
 
           <div
             ref={txt.ref}
-            className={`md:col-span-3 animate-fade-up ${txt.isVisible ? "visible" : ""}`}
+            className={`order-1 md:order-2 md:col-span-3 animate-fade-up ${txt.isVisible ? "visible" : ""}`}
           >
             <p
               className="text-gold mb-4 uppercase"
