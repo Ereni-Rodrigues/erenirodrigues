@@ -73,7 +73,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Ereni Rodrigues — Terapeuta de Reprocessamento Generativo" },
+      { title: "Ereni Rodrigues - Terapeuta de Reprocessamento Generativo" },
       {
         name: "description",
         content:
@@ -91,6 +91,19 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary" },
+      { property: "og:title", content: "Ereni Rodrigues - Terapeuta de Reprocessamento Generativo" },
+      { name: "twitter:title", content: "Ereni Rodrigues - Terapeuta de Reprocessamento Generativo" },
+      { name: "description", content: "Supere depressão, ansiedade e traumas com a Terapia de Reprocessamento Generativo. 
+
+Atendimento online para todo o Brasil. Agende sua sessão!" },
+      { property: "og:description", content: "Supere depressão, ansiedade e traumas com a Terapia de Reprocessamento Generativo. 
+
+Atendimento online para todo o Brasil. Agende sua sessão!" },
+      { name: "twitter:description", content: "Supere depressão, ansiedade e traumas com a Terapia de Reprocessamento Generativo. 
+
+Atendimento online para todo o Brasil. Agende sua sessão!" },
+      { property: "og:image", content: "https://storage.googleapis.com/gpt-engineer-file-uploads/gQ5zhPcHpSPrUAkzKtXzKrV1h6S2/social-images/social-1779983471928-Logo_Oficial_-_Ereni_Rodrigues.webp" },
+      { name: "twitter:image", content: "https://storage.googleapis.com/gpt-engineer-file-uploads/gQ5zhPcHpSPrUAkzKtXzKrV1h6S2/social-images/social-1779983471928-Logo_Oficial_-_Ereni_Rodrigues.webp" },
     ],
     links: [
       { rel: "stylesheet", href: appCss },
