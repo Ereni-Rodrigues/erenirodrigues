@@ -11,6 +11,7 @@ import {
   Star,
   type LucideIcon,
 } from "lucide-react";
+import { useRef, useState } from "react";
 
 interface CardItem {
   icon: LucideIcon;
@@ -99,7 +100,7 @@ function BenefitCard({ item }: { item: CardItem }) {
   const Icon = item.icon;
   return (
     <div
-      className="p-6 transition-all"
+      className="benefit-card p-6 transition-all"
       style={{
         background: "rgba(255,255,255,0.04)",
         border: "1px solid rgba(196,154,44,0.25)",
@@ -145,6 +146,17 @@ function BenefitCard({ item }: { item: CardItem }) {
 }
 
 export function PorqueTerapia() {
+  const carouselRef = useRef<HTMLDivElement>(null);
+  const [activeIndex, setActiveIndex] = useState(0);
+  const totalCards = BENEFITS.length;
+
+  const handleScroll = () => {
+    if (!carouselRef.current) return;
+    const { scrollLeft, offsetWidth } = carouselRef.current;
+    const index = Math.round(scrollLeft / offsetWidth);
+    setActiveIndex(index);
+  };
+
   return (
     <section id="terapia" className="bg-bg-primary pt-20 md:pt-28">
       <div className="mx-auto max-w-6xl px-4 md:px-8 pb-20">
@@ -174,9 +186,31 @@ export function PorqueTerapia() {
           >
             Quais são os benefícios de fazer terapia?
           </h2>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
+          <div
+            ref={carouselRef}
+            onScroll={handleScroll}
+            className="benefits-grid"
+          >
             {BENEFITS.map((it) => (
               <BenefitCard key={it.title} item={it} />
+            ))}
+          </div>
+          <div className="carousel-dots">
+            {Array.from({ length: totalCards }).map((_, i) => (
+              <button
+                key={i}
+                type="button"
+                onClick={() => {
+                  if (!carouselRef.current) return;
+                  carouselRef.current.scrollTo({
+                    left: carouselRef.current.offsetWidth * i,
+                    behavior: "smooth",
+                  });
+                  setActiveIndex(i);
+                }}
+                className={`carousel-dot ${i === activeIndex ? "carousel-dot-active" : ""}`}
+                aria-label={`Ir para card ${i + 1}`}
+              />
             ))}
           </div>
         </div>
