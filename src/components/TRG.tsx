@@ -1,4 +1,5 @@
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
+import trgIllustration from "@/assets/trg-illustration.png";
 
 export function TRG() {
   const a = useScrollAnimation<HTMLDivElement>();
@@ -8,6 +9,12 @@ export function TRG() {
         ref={a.ref}
         className={`mx-auto max-w-[800px] px-4 md:px-8 text-center animate-fade-up ${a.isVisible ? "visible" : ""}`}
       >
+        <img
+          src={trgIllustration}
+          alt="Ilustração mente e coração nas mãos"
+          className="mx-auto mb-10 w-full h-auto object-contain"
+          style={{ maxWidth: "320px", borderRadius: "12px" }}
+        />
         <p
           className="text-gold mb-4 uppercase"
           style={{ fontWeight: 700, fontSize: "0.8rem", letterSpacing: "0.2em" }}
