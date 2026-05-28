@@ -248,3 +248,60 @@ html {
   color: #FFFFFF;
   transform: translateY(-1px);
 }
+/* ── Carrossel de benefícios — mobile only ── */
+@media (min-width: 768px) {
+  .benefits-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+  }
+  .carousel-dots {
+    display: none;
+  }
+}
+
+@media (max-width: 767px) {
+  .benefits-grid {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    gap: 0;
+    padding-bottom: 8px;
+  }
+  .benefits-grid::-webkit-scrollbar {
+    display: none;
+  }
+  .benefit-card {
+    flex: 0 0 100%;
+    width: 100%;
+    scroll-snap-align: start;
+    padding-left: 16px;
+    padding-right: 16px;
+    box-sizing: border-box;
+  }
+}
+
+.carousel-dots {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  margin-top: 20px;
+}
+
+.carousel-dot {
+  all: unset;
+  width: 6px;
+  height: 6px;
+  border-radius: 100px;
+  background: rgba(196, 154, 44, 0.25);
+  cursor: pointer;
+  transition: background 0.3s ease, width 0.3s ease;
+}
+
+.carousel-dot-active {
+  width: 20px;
+  background: var(--gold);
+}
