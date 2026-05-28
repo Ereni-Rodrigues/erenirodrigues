@@ -11,7 +11,7 @@ export function TRG() {
       >
         <div className="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-16 items-center">
           {/* Left: Text content */}
-          <div className="text-center md:text-left order-2 md:order-1">
+          <div className="text-center md:text-left order-1 md:order-1">
             <p
               className="text-gold mb-4 uppercase"
               style={{ fontWeight: 700, fontSize: "0.8rem", letterSpacing: "0.2em" }}
@@ -53,7 +53,7 @@ export function TRG() {
           </div>
 
           {/* Right: Image */}
-          <div className="flex justify-center md:justify-end order-1 md:order-2">
+          <div className="flex justify-center md:justify-end order-2 md:order-2">
             <img
               src={trgIllustration}
               alt="Ilustração mente e coração nas mãos"

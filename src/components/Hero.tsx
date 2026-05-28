@@ -14,7 +14,7 @@ export function Hero() {
       <div className="mx-auto max-w-7xl w-full px-4 md:px-8">
         <div className="grid grid-cols-1 md:grid-cols-5 gap-10 md:gap-12 items-center">
           {/* Photo */}
-          <div className="md:col-span-2 md:order-2 flex justify-center">
+          <div className="order-2 md:col-span-2 md:order-2 flex justify-center">
             <div
               className="relative w-full"
               style={{ maxWidth: "340px", aspectRatio: "3 / 4" }}
@@ -28,7 +28,7 @@ export function Hero() {
           </div>
 
           {/* Text */}
-          <div className="md:col-span-3 md:order-1 flex flex-col justify-center px-2 md:px-4 py-2">
+          <div className="order-1 md:col-span-3 md:order-1 flex flex-col justify-center px-2 md:px-4 py-2">
             <p
               className="text-[0.78rem] mb-3 uppercase"
               style={{
