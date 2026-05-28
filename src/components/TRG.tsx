@@ -10,18 +10,8 @@ export function TRG() {
         className={`mx-auto max-w-[1000px] px-4 md:px-8 animate-fade-up ${a.isVisible ? "visible" : ""}`}
       >
         <div className="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-16 items-center">
-          {/* Left: Image */}
-          <div className="flex justify-center md:justify-start order-1">
-            <img
-              src={trgIllustration}
-              alt="Ilustração mente e coração nas mãos"
-              className="w-full h-auto object-contain"
-              style={{ maxWidth: "400px", borderRadius: "12px" }}
-            />
-          </div>
-
-          {/* Right: Text content */}
-          <div className="text-center md:text-left order-2">
+          {/* Left: Text content */}
+          <div className="text-center md:text-left order-2 md:order-1">
             <p
               className="text-gold mb-4 uppercase"
               style={{ fontWeight: 700, fontSize: "0.8rem", letterSpacing: "0.2em" }}
@@ -60,6 +50,16 @@ export function TRG() {
                 Não tratamos os sintomas. Resolvemos a causa.
               </p>
             </div>
+          </div>
+
+          {/* Right: Image */}
+          <div className="flex justify-center md:justify-end order-1 md:order-2">
+            <img
+              src={trgIllustration}
+              alt="Ilustração mente e coração nas mãos"
+              className="w-full h-auto object-contain"
+              style={{ maxWidth: "400px", borderRadius: "12px" }}
+            />
           </div>
         </div>
       </div>
