@@ -29,6 +29,7 @@ export function Hero() {
 
           {/* Text */}
           <div className="order-1 md:col-span-3 md:order-1 flex flex-col justify-center px-2 md:px-4 py-2">
+            <p
               className="text-[0.78rem] mb-3 uppercase"
               style={{
                 color: "var(--gold)",
