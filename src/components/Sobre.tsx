@@ -12,7 +12,6 @@ export function Sobre() {
             ref={img.ref}
             className={`order-2 md:order-1 md:col-span-2 flex justify-center animate-fade-in ${img.isVisible ? "visible" : ""}`}
           >
-          >
             <div className="relative w-full">
               <img
                 src={ereniSobre}
