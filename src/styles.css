@@ -238,14 +238,14 @@ html {
 /* Botão direito — contorno claro */
 .btn-hero-outline {
   background: transparent;
-  color: rgba(255, 255, 255, 0.92);
-  border: 1px solid rgba(255, 255, 255, 0.45);
+  color: #3E2007;
+  border: 1px solid rgba(62, 32, 7, 0.45);
 }
 
 .btn-hero-outline:hover {
-  background: rgba(255, 255, 255, 0.08);
-  border-color: rgba(255, 255, 255, 0.75);
-  color: #FFFFFF;
+  background: rgba(62, 32, 7, 0.06);
+  border-color: rgba(62, 32, 7, 0.75);
+  color: #3E2007;
   transform: translateY(-1px);
 }
 /* ── Carrossel de benefícios — mobile only ── */

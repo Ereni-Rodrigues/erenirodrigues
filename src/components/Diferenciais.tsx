@@ -26,7 +26,7 @@ export function Diferenciais() {
     <section
       id="diferenciais"
       className="py-20 md:py-28"
-      style={{ backgroundColor: "var(--brown-dark)" }}
+      style={{ backgroundColor: "#F5EFE6" }}
     >
       <div className="mx-auto max-w-6xl px-4 md:px-8">
         <div
@@ -45,8 +45,8 @@ export function Diferenciais() {
             Por que a Ereni
           </p>
           <h2
-            className="font-display text-white"
-            style={{ fontSize: "clamp(1.9rem, 3.4vw, 2.6rem)", fontWeight: 600 }}
+            className="font-display"
+            style={{ fontSize: "clamp(1.9rem, 3.4vw, 2.6rem)", fontWeight: 600, color: "#3E2007" }}
           >
             A escolha certa para a sua transformação
           </h2>
@@ -60,20 +60,20 @@ export function Diferenciais() {
                 key={it.title}
                 className={`animate-fade-up delay-${i + 1} ${grid.isVisible ? "visible" : ""}`}
                 style={{
-                  background: "rgba(255,255,255,0.07)",
-                  border: "1px solid rgba(196,154,44,0.3)",
+                  background: "#FFFFFF",
+                  border: "1px solid rgba(196,154,44,0.35)",
                   borderRadius: "8px",
                   padding: "32px",
                 }}
               >
                 <Icon size={32} className="mb-4" style={{ color: "var(--gold)" }} strokeWidth={1.75} />
                 <h3
-                  className="text-white mb-2"
-                  style={{ fontFamily: "Lato, sans-serif", fontWeight: 700, fontSize: "1.1rem" }}
+                  className="mb-2"
+                  style={{ fontFamily: "Lato, sans-serif", fontWeight: 700, fontSize: "1.1rem", color: "#3E2007" }}
                 >
                   {it.title}
                 </h3>
-                <p style={{ color: "rgba(255,255,255,0.6)", fontSize: "0.98rem", lineHeight: 1.6 }}>
+                <p style={{ color: "rgba(62,32,7,0.7)", fontSize: "0.98rem", lineHeight: 1.6 }}>
                   {it.text}
                 </p>
               </div>

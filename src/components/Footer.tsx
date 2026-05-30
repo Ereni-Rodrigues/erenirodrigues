@@ -5,7 +5,7 @@ const WA_LINK = "https://wa.me/5511966308468";
 
 export function Footer() {
   return (
-    <footer style={{ background: "#130600" }} className="w-full text-white">
+    <footer style={{ background: "#2C4A6E" }} className="w-full text-white">
       <div className="max-w-6xl mx-auto px-6 py-16 grid grid-cols-1 md:grid-cols-3 gap-12">
         {/* COLUNA 1 — Identidade */}
         <div className="flex flex-col gap-5">
