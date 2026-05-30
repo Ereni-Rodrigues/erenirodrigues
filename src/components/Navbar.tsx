@@ -39,12 +39,12 @@ export function Navbar() {
 
         <nav className="hidden md:flex items-center gap-7">
           {NAV_LINKS.map((l) => (
-            <a
-              key={l.href}
-              href={l.href}
-              className="text-[0.92rem] text-text-body hover:text-gold transition-colors"
-              style={{ fontWeight: 400 }}
-            >
+              <a
+                key={l.href}
+                href={l.href}
+                className="text-[0.92rem] text-text-body hover:text-[#2C4A6E] transition-colors"
+                style={{ fontWeight: 400 }}
+              >
               {l.label}
             </a>
           ))}

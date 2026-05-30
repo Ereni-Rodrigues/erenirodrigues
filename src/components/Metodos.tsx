@@ -60,11 +60,11 @@ export function Metodos() {
             >
             <div
               className="bg-white flex items-center gap-4 p-5 shadow-[0_4px_18px_rgba(92,51,23,0.06)]"
-              style={{ borderRadius: "8px" }}
+              style={{ borderRadius: "8px", borderLeft: "3px solid #2C4A6E" }}
             >
               <div
-                className="font-display text-gold text-center shrink-0"
-                style={{ width: "60px", fontWeight: 700, fontSize: "2.5rem", lineHeight: 1 }}
+                className="font-display text-center shrink-0"
+                style={{ width: "60px", fontWeight: 700, fontSize: "2.5rem", lineHeight: 1, color: "#2C4A6E" }}
               >
                 {m.n}
               </div>
