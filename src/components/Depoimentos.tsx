@@ -85,7 +85,7 @@ export function Depoimentos() {
               aria-hidden
               className="font-display block"
               style={{
-                color: "var(--gold)",
+                color: "#2C4A6E",
                 opacity: 0.4,
                 fontSize: "4rem",
                 lineHeight: 0.6,

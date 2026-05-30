@@ -46,7 +46,7 @@ export function Hero() {
               style={{
                 width: "56px",
                 height: "2px",
-                backgroundColor: "var(--gold)",
+                backgroundColor: "#2C4A6E",
                 opacity: 0.9,
               }}
             />
@@ -94,7 +94,7 @@ export function Hero() {
         <div
           className="w-full flex flex-col items-center gap-4 pt-10 pb-2 px-4"
           style={{
-            borderTop: "1px solid rgba(196,154,44,0.35)",
+            borderTop: "1px solid rgba(44,74,110,0.35)",
             marginTop: "2.5rem",
           }}
         >

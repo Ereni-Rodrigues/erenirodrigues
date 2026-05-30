@@ -80,9 +80,9 @@ function Card({ item }: { item: CardItem }) {
   return (
     <div
       className="bg-white p-6 shadow-[0_4px_18px_rgba(92,51,23,0.06)]"
-      style={{ borderRadius: "8px", borderLeft: "4px solid var(--gold)" }}
+      style={{ borderRadius: "8px", borderLeft: "4px solid #2C4A6E" }}
     >
-      <Icon size={28} className="text-gold mb-3" strokeWidth={1.75} />
+      <Icon size={28} className="mb-3" style={{ color: "#2C4A6E" }} strokeWidth={1.75} />
       <h3
         className="text-brown-dark mb-2"
         style={{ fontFamily: "Lato, sans-serif", fontWeight: 700, fontSize: "1.05rem" }}
@@ -104,7 +104,7 @@ function BenefitCard({ item }: { item: CardItem }) {
       style={{
         background: "#FFFFFF",
         border: "1px solid rgba(196,154,44,0.3)",
-        borderTop: "3px solid var(--gold)",
+        borderTop: "3px solid #2C4A6E",
         borderRadius: "8px",
       }}
       onMouseEnter={(e) => {
@@ -122,10 +122,10 @@ function BenefitCard({ item }: { item: CardItem }) {
           width: "44px",
           height: "44px",
           borderRadius: "999px",
-          background: "rgba(196,154,44,0.15)",
+          background: "rgba(44,74,110,0.15)",
         }}
       >
-        <Icon size={22} style={{ color: "var(--gold)" }} strokeWidth={1.75} />
+        <Icon size={22} style={{ color: "#2C4A6E" }} strokeWidth={1.75} />
       </div>
       <h3
         className="mb-2"
