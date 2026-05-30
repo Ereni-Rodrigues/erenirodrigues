@@ -46,7 +46,7 @@ export function Diferenciais() {
           </p>
           <h2
             className="font-display"
-            style={{ fontSize: "clamp(1.9rem, 3.4vw, 2.6rem)", fontWeight: 600 }}
+            style={{ fontSize: "clamp(1.9rem, 3.4vw, 2.6rem)", fontWeight: 600, color: "#3E2007" }}
           >
             A escolha certa para a sua transformação
           </h2>
