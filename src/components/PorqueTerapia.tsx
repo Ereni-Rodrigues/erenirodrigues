@@ -102,17 +102,17 @@ function BenefitCard({ item }: { item: CardItem }) {
     <div
       className="benefit-card p-6 transition-all"
       style={{
-        background: "rgba(255,255,255,0.04)",
-        border: "1px solid rgba(196,154,44,0.25)",
+        background: "#FFFFFF",
+        border: "1px solid rgba(196,154,44,0.3)",
         borderTop: "3px solid var(--gold)",
         borderRadius: "8px",
       }}
       onMouseEnter={(e) => {
-        e.currentTarget.style.background = "rgba(196,154,44,0.08)";
+        e.currentTarget.style.background = "rgba(196,154,44,0.06)";
         e.currentTarget.style.boxShadow = "0 4px 24px rgba(196,154,44,0.12)";
       }}
       onMouseLeave={(e) => {
-        e.currentTarget.style.background = "rgba(255,255,255,0.04)";
+        e.currentTarget.style.background = "#FFFFFF";
         e.currentTarget.style.boxShadow = "none";
       }}
     >
@@ -133,12 +133,12 @@ function BenefitCard({ item }: { item: CardItem }) {
           fontFamily: "Lato, sans-serif",
           fontWeight: 700,
           fontSize: "1.05rem",
-          color: "#FFFFFF",
+          color: "#3E2007",
         }}
       >
         {item.title}
       </h3>
-      <p style={{ color: "rgba(255,255,255,0.68)", fontSize: "0.95rem", lineHeight: 1.6 }}>
+      <p style={{ color: "rgba(62,32,7,0.72)", fontSize: "0.95rem", lineHeight: 1.6 }}>
         {item.text}
       </p>
     </div>
@@ -173,14 +173,14 @@ export function PorqueTerapia() {
         </div>
       </div>
 
-      <div style={{ background: "var(--brown-dark)" }} className="py-20 md:py-28">
+      <div style={{ background: "#F5EFE6" }} className="py-20 md:py-28">
         <div className="mx-auto max-w-6xl px-4 md:px-8">
           <h2
             className="font-display text-center mb-10"
             style={{
               fontSize: "clamp(1.7rem, 3vw, 2.3rem)",
               fontWeight: 600,
-              color: "#FFFFFF",
+              color: "#3E2007",
               fontFamily: "Playfair Display",
             }}
           >

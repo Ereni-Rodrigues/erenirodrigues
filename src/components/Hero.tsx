@@ -8,7 +8,7 @@ export function Hero() {
       id="inicio"
       className="relative w-full min-h-[85vh] flex flex-col justify-center pt-28 pb-12 md:pt-32"
       style={{
-        background: "linear-gradient(135deg, #5C3317 0%, #6B3E1F 50%, #5C3317 100%)",
+        background: "#F5EFE6",
       }}
     >
       <div className="mx-auto max-w-7xl w-full px-4 md:px-8">
@@ -54,7 +54,7 @@ export function Hero() {
               className="font-display leading-[1.1] mb-6"
               style={{ fontSize: "clamp(2.2rem, 5vw, 3.8rem)", fontWeight: 700 }}
             >
-              <span className="block" style={{ color: "rgba(255,255,255,0.9)" }}>
+              <span className="block" style={{ color: "#3E2007" }}>
                 Se livre das dores que
               </span>
               <span className="block text-gold">você não causou.</span>
@@ -62,7 +62,7 @@ export function Hero() {
             <p
               className="mb-8 max-w-xl"
               style={{
-                color: "rgba(255,255,255,0.72)",
+                color: "rgba(62,32,7,0.78)",
                 fontSize: "1.15rem",
                 lineHeight: 1.6,
               }}
@@ -94,14 +94,14 @@ export function Hero() {
         <div
           className="w-full flex flex-col items-center gap-4 pt-10 pb-2 px-4"
           style={{
-            borderTop: "1px solid rgba(196,154,44,0.2)",
+            borderTop: "1px solid rgba(196,154,44,0.35)",
             marginTop: "2.5rem",
           }}
         >
           <svg width="24" height="16" viewBox="0 0 24 16" fill="none" aria-hidden>
             <path
               d="M0 16C0 10.667 2.667 5.333 8 0L10.667 2C7.111 6.222 5.333 10.222 5.333 14H10.667V16H0ZM13.333 16C13.333 10.667 16 5.333 21.333 0L24 2C20.444 6.222 18.667 10.222 18.667 14H24V16H13.333Z"
-              fill="rgba(196,154,44,0.4)"
+              fill="rgba(196,154,44,0.6)"
             />
           </svg>
           <p
@@ -110,7 +110,7 @@ export function Hero() {
               fontStyle: "italic",
               fontWeight: 400,
               fontSize: "clamp(1rem, 2.2vw, 1.3rem)",
-              color: "rgba(255,255,255,0.82)",
+              color: "rgba(62,32,7,0.82)",
               textAlign: "center",
               maxWidth: "780px",
               lineHeight: 1.75,
