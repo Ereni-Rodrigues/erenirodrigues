@@ -5,7 +5,7 @@ const WA_LINK = "https://wa.me/5511966308468";
 
 export function Footer() {
   return (
-    <footer style={{ background: "#2C4A6E" }} className="w-full text-white">
+    <footer style={{ background: "#E8DDD0" }} className="w-full">
       <div className="max-w-6xl mx-auto px-6 py-16 grid grid-cols-1 md:grid-cols-3 gap-12">
         {/* COLUNA 1 — Identidade */}
         <div className="flex flex-col gap-5">
@@ -13,11 +13,11 @@ export function Footer() {
             src={logoEreni}
             alt="Ereni Rodrigues - Terapeuta"
             className="h-10 w-auto object-contain self-start"
-            style={{ filter: "brightness(0) invert(1)", opacity: 0.85 }}
+            style={{ opacity: 0.9 }}
           />
           <p
             style={{
-              color: "rgba(255,255,255,0.5)",
+              color: "rgba(62,32,7,0.65)",
               fontFamily: "Lato, sans-serif",
               fontWeight: 300,
               fontSize: "0.9rem",
@@ -28,7 +28,7 @@ export function Footer() {
           </p>
           <p
             style={{
-              color: "rgba(255,255,255,0.35)",
+              color: "rgba(62,32,7,0.5)",
               fontFamily: "Lato, sans-serif",
               fontWeight: 300,
               fontSize: "0.8rem",
@@ -43,7 +43,7 @@ export function Footer() {
           <p
             className="uppercase mb-5"
             style={{
-              color: "var(--gold-light)",
+              color: "#B8962E",
               fontWeight: 700,
               fontSize: "0.75rem",
               letterSpacing: "0.18em",
@@ -61,17 +61,17 @@ export function Footer() {
             >
               <MessageCircle
                 size={15}
-                style={{ color: "var(--gold)", flexShrink: 0, opacity: 0.8 }}
+                style={{ color: "#B8962E", flexShrink: 0, opacity: 0.8 }}
               />
               <span
                 style={{
-                  color: "rgba(255,255,255,0.55)",
+                  color: "rgba(62,32,7,0.75)",
                   fontFamily: "Lato",
                   fontSize: "0.88rem",
                   fontWeight: 300,
                   transition: "color 0.25s ease",
                 }}
-                className="group-hover:text-white"
+                className="group-hover:text-[#3E2007]"
               >
                 (11) 96630-8468
               </span>
@@ -83,17 +83,17 @@ export function Footer() {
             >
               <Mail
                 size={15}
-                style={{ color: "var(--gold)", flexShrink: 0, opacity: 0.8 }}
+                style={{ color: "#B8962E", flexShrink: 0, opacity: 0.8 }}
               />
               <span
                 style={{
-                  color: "rgba(255,255,255,0.55)",
+                  color: "rgba(62,32,7,0.75)",
                   fontFamily: "Lato",
                   fontSize: "0.88rem",
                   fontWeight: 300,
                   transition: "color 0.25s ease",
                 }}
-                className="group-hover:text-white"
+                className="group-hover:text-[#3E2007]"
               >
                 erenirodrigues6@gmail.com
               </span>
@@ -107,17 +107,17 @@ export function Footer() {
             >
               <Instagram
                 size={15}
-                style={{ color: "var(--gold)", flexShrink: 0, opacity: 0.8 }}
+                style={{ color: "#B8962E", flexShrink: 0, opacity: 0.8 }}
               />
               <span
                 style={{
-                  color: "rgba(255,255,255,0.55)",
+                  color: "rgba(62,32,7,0.75)",
                   fontFamily: "Lato",
                   fontSize: "0.88rem",
                   fontWeight: 300,
                   transition: "color 0.25s ease",
                 }}
-                className="group-hover:text-white"
+                className="group-hover:text-[#3E2007]"
               >
                 @erenirodriguesterapeuta
               </span>
@@ -130,7 +130,7 @@ export function Footer() {
           <p
             className="uppercase mb-5"
             style={{
-              color: "var(--gold-light)",
+              color: "#B8962E",
               fontWeight: 700,
               fontSize: "0.75rem",
               letterSpacing: "0.18em",
@@ -151,7 +151,7 @@ export function Footer() {
                 key={item.href}
                 href={item.href}
                 style={{
-                  color: "rgba(255,255,255,0.45)",
+                  color: "rgba(62,32,7,0.6)",
                   fontFamily: "Lato",
                   fontSize: "0.88rem",
                   fontWeight: 300,
@@ -159,10 +159,10 @@ export function Footer() {
                   transition: "color 0.25s ease",
                 }}
                 onMouseEnter={(e) =>
-                  (e.currentTarget.style.color = "rgba(255,255,255,0.9)")
+                  (e.currentTarget.style.color = "#3E2007")
                 }
                 onMouseLeave={(e) =>
-                  (e.currentTarget.style.color = "rgba(255,255,255,0.45)")
+                  (e.currentTarget.style.color = "rgba(62,32,7,0.6)")
                 }
               >
                 {item.label}
@@ -174,43 +174,45 @@ export function Footer() {
 
       {/* Linha divisória */}
       <div
-        style={{ borderTop: "1px solid rgba(255,255,255,0.07)" }}
+        style={{ borderTop: "1px solid rgba(62,32,7,0.12)" }}
         className="max-w-6xl mx-auto"
       />
 
       {/* Barra inferior */}
-      <div className="max-w-6xl mx-auto px-6 py-6 flex flex-col md:flex-row items-center justify-between gap-3">
-        <p
-          style={{
-            color: "rgba(255,255,255,0.25)",
-            fontFamily: "Lato",
-            fontWeight: 300,
-            fontSize: "0.78rem",
-          }}
-        >
-          &copy; 2026 Ereni Rodrigues. Todos os direitos reservados.
-        </p>
-        <a
-          href="https://nextassessoria.com"
-          target="_blank"
-          rel="noopener noreferrer"
-          style={{
-            color: "rgba(196,154,44,0.45)",
-            fontFamily: "Lato",
-            fontWeight: 300,
-            fontSize: "0.78rem",
-            textDecoration: "none",
-            transition: "color 0.25s ease",
-          }}
-          onMouseEnter={(e) =>
-            (e.currentTarget.style.color = "rgba(196,154,44,0.85)")
-          }
-          onMouseLeave={(e) =>
-            (e.currentTarget.style.color = "rgba(196,154,44,0.45)")
-          }
-        >
-          Desenvolvido por Next Assessoria
-        </a>
+      <div style={{ background: "#D9CDBF" }}>
+        <div className="max-w-6xl mx-auto px-6 py-6 flex flex-col md:flex-row items-center justify-between gap-3">
+          <p
+            style={{
+              color: "rgba(62,32,7,0.5)",
+              fontFamily: "Lato",
+              fontWeight: 300,
+              fontSize: "0.78rem",
+            }}
+          >
+            &copy; 2026 Ereni Rodrigues. Todos os direitos reservados.
+          </p>
+          <a
+            href="https://nextassessoria.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            style={{
+              color: "rgba(62,32,7,0.5)",
+              fontFamily: "Lato",
+              fontWeight: 300,
+              fontSize: "0.78rem",
+              textDecoration: "none",
+              transition: "color 0.25s ease",
+            }}
+            onMouseEnter={(e) =>
+              (e.currentTarget.style.color = "#3E2007")
+            }
+            onMouseLeave={(e) =>
+              (e.currentTarget.style.color = "rgba(62,32,7,0.5)")
+            }
+          >
+            Desenvolvido por Next Assessoria
+          </a>
+        </div>
       </div>
     </footer>
   );
