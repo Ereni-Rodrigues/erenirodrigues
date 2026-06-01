@@ -24,7 +24,7 @@ export function Footer() {
               lineHeight: 1.7,
             }}
           >
-            Terapeuta de Reprocessamento Generativo
+            Terapeuta de Terapia de Reprocessamento Generativo
           </p>
           <p
             style={{
