@@ -77,7 +77,7 @@ export function Hero() {
                 <span>+ Por que fazer terapia?</span>
               </a>
               <a
-                href={WA_LINK}
+                href={WA.hero}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="btn-hero-outline"
