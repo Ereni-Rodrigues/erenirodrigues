@@ -1,7 +1,6 @@
 import { Instagram, MessageCircle, Mail } from "lucide-react";
 import logoEreni from "@/assets/logo-ereni.png";
-
-const WA_LINK = "https://wa.me/5511966308468";
+import { WA } from "@/utils/whatsapp";
 
 export function Footer() {
   return (
