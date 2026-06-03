@@ -1,7 +1,6 @@
 import { Instagram, MessageCircle, Mail } from "lucide-react";
 import logoEreni from "@/assets/logo-ereni.png";
-
-const WA_LINK = "https://wa.me/5511966308468";
+import { WA } from "@/utils/whatsapp";
 
 export function Footer() {
   return (
@@ -53,7 +52,7 @@ export function Footer() {
           </p>
           <div className="flex flex-col gap-3">
             <a
-              href={WA_LINK}
+            href={WA.footer}
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center gap-3 group"

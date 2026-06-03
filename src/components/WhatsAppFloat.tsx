@@ -1,9 +1,9 @@
-const WA_LINK = "https://wa.me/5511966308468";
+import { WA } from "@/utils/whatsapp";
 
 export function WhatsAppFloat() {
   return (
     <a
-      href={WA_LINK}
+      href={WA.float}
       target="_blank"
       rel="noopener noreferrer"
       aria-label="Agende sua sessão pelo WhatsApp"

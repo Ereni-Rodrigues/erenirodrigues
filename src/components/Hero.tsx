@@ -1,6 +1,5 @@
 import ereniHero from "@/assets/ereni-hero.jpg";
-
-const WA_LINK = "https://wa.me/5511966308468";
+import { WA } from "@/utils/whatsapp";
 
 export function Hero() {
   return (
@@ -78,7 +77,7 @@ export function Hero() {
                 <span>+ Por que fazer terapia?</span>
               </a>
               <a
-                href={WA_LINK}
+                href={WA.hero}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="btn-hero-outline"

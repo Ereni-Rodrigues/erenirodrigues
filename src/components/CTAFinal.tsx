@@ -1,6 +1,5 @@
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
-
-const WA_LINK = "https://wa.me/5511966308468";
+import { WA } from "@/utils/whatsapp";
 
 export function CTAFinal() {
   const a = useScrollAnimation<HTMLDivElement>();
@@ -30,7 +29,7 @@ export function CTAFinal() {
           Agende sua sessão online agora e dê o primeiro passo.
         </p>
         <a
-          href={WA_LINK}
+          href={WA.ctaFinal}
           target="_blank"
           rel="noopener noreferrer"
           className="btn-primary"

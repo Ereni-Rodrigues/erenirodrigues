@@ -1,7 +1,6 @@
 import { useEffect, useState } from "react";
 import logoEreni from "@/assets/logo-ereni.png";
-
-const WA_LINK = "https://wa.me/5511966308468";
+import { WA } from "@/utils/whatsapp";
 
 const NAV_LINKS = [
   { href: "#inicio", label: "Início" },
@@ -51,7 +50,7 @@ export function Navbar() {
         </nav>
 
         <a
-          href={WA_LINK}
+          href={WA.navbar}
           target="_blank"
           rel="noopener noreferrer"
           className="inline-flex items-center rounded-[4px] bg-gold px-4 py-2 text-white text-[0.85rem] md:text-[0.9rem] font-bold uppercase transition-colors hover:bg-[#b08824]"
