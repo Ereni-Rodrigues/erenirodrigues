@@ -1,7 +1,6 @@
 import { useEffect, useState } from "react";
 import logoEreni from "@/assets/logo-ereni.png";
-
-const WA_LINK = "https://wa.me/5511966308468";
+import { WA } from "@/utils/whatsapp";
 
 const NAV_LINKS = [
   { href: "#inicio", label: "Início" },
